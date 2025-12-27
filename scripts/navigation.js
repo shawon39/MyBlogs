@@ -19,7 +19,7 @@ class Navigation {
      */
     async init() {
         try {
-            const response = await fetch('content/manifest.json');
+            const response = await fetch('./content/manifest.json');
             this.manifest = await response.json();
             this.render();
             this.updateActiveState();
@@ -285,7 +285,7 @@ class Navigation {
                         topicSlug: topic.slug,
                         topicFolder: topic.folder,
                         file: article.file,
-                        path: `content/${skill.folder}/${topic.folder}/${article.file}.md`
+                        path: `./content/${skill.folder}/${topic.folder}/${article.file}.md`
                     });
                 });
             });
@@ -309,7 +309,7 @@ class Navigation {
         const article = topic.articles.find(a => a.slug === articleSlug);
         if (!article) return null;
 
-        return `content/${skill.folder}/${topic.folder}/${article.file}.md`;
+        return `./content/${skill.folder}/${topic.folder}/${article.file}.md`;
     }
 
     /**
