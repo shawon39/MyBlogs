@@ -1,0 +1,60 @@
+{
+  "generated": "2025-12-27T19:05:39.360Z",
+  "skills": [
+    {
+      "slug": "salesforce",
+      "name": "Salesforce",
+      "folder": "Salesforce",
+      "order": 1,
+      "topics": [
+        {
+          "slug": "admin",
+          "name": "Administration",
+          "folder": "Admin",
+          "order": 1,
+          "articles": [
+            {
+              "slug": "user-management",
+              "title": "User Management in Salesforce",
+              "file": "user-management"
+            }
+          ]
+        },
+        {
+          "slug": "developer",
+          "name": "Development",
+          "folder": "Developer",
+          "order": 2,
+          "articles": [
+            {
+              "slug": "apex-basics",
+              "title": "Apex Programming Basics",
+              "file": "apex-basics"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "frontend",
+      "name": "Frontend",
+      "folder": "Frontend",
+      "order": 2,
+      "topics": [
+        {
+          "slug": "javascript",
+          "name": "JavaScript",
+          "folder": "JavaScript",
+          "order": 1,
+          "articles": [
+            {
+              "slug": "async-await",
+              "title": "Async/Await in JavaScript",
+              "file": "async-await"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
