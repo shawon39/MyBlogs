@@ -159,6 +159,24 @@ class App {
     }
 
     /**
+     * Toggle sidebar (works on both mobile and desktop)
+     */
+    toggleSidebar() {
+        if (window.innerWidth <= 900) {
+            this.toggleMobileMenu();
+        } else {
+            this.toggleDesktopSidebar();
+        }
+    }
+
+    /**
+     * Toggle desktop sidebar
+     */
+    toggleDesktopSidebar() {
+        this.sidebarLeft.classList.toggle('collapsed');
+    }
+
+    /**
      * Handle keyboard shortcuts
      * @param {KeyboardEvent} e
      */
@@ -175,10 +193,8 @@ class App {
                 break;
 
             case 'b':
-                // Toggle sidebar (mobile)
-                if (window.innerWidth <= 900) {
-                    this.toggleMobileMenu();
-                }
+                // Toggle sidebar
+                this.toggleSidebar();
                 break;
         }
     }

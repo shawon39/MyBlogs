@@ -913,6 +913,32 @@ body {
 }
 
 /* ============================================
+   Desktop Sidebar Collapse
+   ============================================ */
+
+/* Sidebar collapse transition (desktop only) */
+.sidebar-left {
+    transition: width var(--transition-normal);
+}
+
+.sidebar-left.collapsed {
+    width: 0;
+    min-width: 0;
+    overflow: hidden;
+}
+
+/* Adjust grid layout when sidebar is collapsed */
+.layout:has(.sidebar-left.collapsed) {
+    grid-template-columns: 0 1fr var(--toc-width);
+}
+
+@media (max-width: 1200px) {
+    .layout:has(.sidebar-left.collapsed) {
+        grid-template-columns: 0 1fr;
+    }
+}
+
+/* ============================================
    Responsive Design
    ============================================ */
 
